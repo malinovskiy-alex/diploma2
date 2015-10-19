@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title th:text="#{view.index.title}">Welcome!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header">&nbsp;</div>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <th>Адресс</th>
+            <th>Номер машины</th>
+            <th>Затраченое время</th>
+            <th>Пройденная дистанция</th>
+        </thead>
+        <tbody>
+        <tr th:each="addr : ${addrs}">
+            <td th:text="${addr.name}"></td>
+            <td th:text="${addr.clusterId}"></td>
+            <td th:text="${addr.time}"></td>
+            <td th:text="${addr.distance}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

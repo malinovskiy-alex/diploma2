@@ -1,7 +1,9 @@
-package com.malinovskiy.account;
+package com.malinovskiy.controller;
 
 import java.security.Principal;
 
+import com.malinovskiy.model.User;
+import com.malinovskiy.model.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.annotation.Secured;
@@ -26,7 +28,7 @@ class AccountController {
     @RequestMapping(value = "account/current", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
     @ResponseBody
-    public Account accounts(Principal principal) {
+    public User accounts(Principal principal) {
         Assert.notNull(principal);
         return accountRepository.findByEmail(principal.getName());
     }

@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 
-import com.malinovskiy.account.UserService;
+import com.malinovskiy.model.UserService;
 
 @Configuration
 @ImportResource(value = "classpath:spring-security-context.xml")

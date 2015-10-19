@@ -67,7 +67,7 @@ class WebMvcConfig extends WebMvcConfigurationSupport {
         return templateEngine;
     }
 
-    @Bean
+   @Bean
     public ThymeleafViewResolver viewResolver() {
         ThymeleafViewResolver thymeleafViewResolver = new ThymeleafViewResolver();
         thymeleafViewResolver.setTemplateEngine(templateEngine());

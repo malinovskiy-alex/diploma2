@@ -1,4 +1,4 @@
-package com.malinovskiy.error;
+package com.malinovskiy.controller;
 
 import java.text.MessageFormat;
 
