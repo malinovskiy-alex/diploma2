@@ -6,8 +6,16 @@
     <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link href="../../../resources/css/core.css" rel="stylesheet" media="screen"/>
     <style>
-        .form-control {
-            width: 50%;
+        html,
+        body,
+        #map {
+            display: block;
+            width: 60%;
+            height: 100%;
+        }
+
+        #map {
+            background: #58B;
         }
     </style>
     <script data-main="../../../resources/js/main.js" src="../../../resources/js/lib/require/require.js"></script>
@@ -16,7 +24,6 @@
 <div th:replace="fragments/header :: header">&nbsp;</div>
 <div class="container orders">
 </div>
-<div class="map">
-</div>
+<div id="map"></div>
 </body>
 </html>

@@ -34,7 +34,8 @@ define(function (require) {
             this.collection.forEach(function (item) {
                 this.renderOrder(item)
             }, this);
-            this.$el.append(_.template(paginationTemplate, this.collection.state))
+            this.$el.append(_.template(paginationTemplate, this.collection.state));
+            this.renderMapsView();
         },
         renderOrder: function (item) {
             var orderView = new OrderView({model: item});
@@ -60,6 +61,12 @@ define(function (require) {
             });
             this.$el.append(orderForm.render().el);
             orderForm.openEditForm();
+        },
+        renderMapsView: function(){
+            var map = new gmaps.Map($("#map")[0], {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
         },
         showFirst: function () {
             this.collection.getFirstPage()
